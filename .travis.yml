@@ -1,0 +1,15 @@
+language: go
+go_import_path: github.com/ondrejit/gwets
+
+go:
+  - 1.7.x
+  - master
+
+install:
+  - go get ./...
+
+before_script:
+  - go vet ./...
+
+script:
+  - go build
